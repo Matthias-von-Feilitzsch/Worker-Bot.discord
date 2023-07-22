@@ -1,5 +1,10 @@
 import discord
 from discord.ext import commands
+import os
+
+# Access the token from the environment variable
+token = os.environ['DISCORD_TOKEN']
+
 
 intents = discord.Intents.default()
 intents.members = True
@@ -18,4 +23,4 @@ async def on_voice_state_update(member, before, after):
             await text_channel.send(f"@everyone, {member.name} has joined {after.channel.name} and is now working!")
 
 # Replace 'your-token-goes-here' with your bot's token
-bot.run(MTEzMTk5NjE0MDE1ODU5OTI5OA.Gnxglw.kHT4a-DC3Poj2icHYTqQ4gCPLcViyxCsrnp908)
+bot.run(token)
