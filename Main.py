@@ -28,5 +28,10 @@ bot.run(token)
 
 import os
 
-token = os.environ.get('DISCORD_TOKEN')
-print(f"Token: {token}")
+# Check if the 'DISCORD_TOKEN' environment variable exists
+if 'DISCORD_TOKEN' in os.environ:
+    # Retrieve the value of the 'DISCORD_TOKEN' environment variable
+    token = os.environ['DISCORD_TOKEN']
+    print(f"The 'DISCORD_TOKEN' environment variable exists and its value is: {token}")
+else:
+    print("The 'DISCORD_TOKEN' environment variable is not set.")
