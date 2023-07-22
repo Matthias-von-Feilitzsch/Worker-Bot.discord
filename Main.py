@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 # Access the token from the environment variable
-token = os.environ['DISCORD_TOKEN']
+token = os.environ.get['DISCORD_TOKEN']
 
 
 intents = discord.Intents.default()
@@ -24,3 +24,9 @@ async def on_voice_state_update(member, before, after):
 
 # Replace 'your-token-goes-here' with your bot's token
 bot.run(token)
+
+
+import os
+
+token = os.environ.get('DISCORD_TOKEN')
+print(f"Token: {token}")
