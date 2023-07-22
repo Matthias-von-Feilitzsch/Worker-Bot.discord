@@ -18,4 +18,4 @@ async def on_voice_state_update(member, before, after):
             await text_channel.send(f"@everyone, {member.name} has joined {after.channel.name} and is now working!")
 
 # Replace 'your-token-goes-here' with your bot's token
-bot.run('your-token-goes-here')
+bot.run(MTEzMTk5NjE0MDE1ODU5OTI5OA.Gnxglw.kHT4a-DC3Poj2icHYTqQ4gCPLcViyxCsrnp908)
